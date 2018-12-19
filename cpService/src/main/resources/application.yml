@@ -1,0 +1,49 @@
+#
+#
+##spring.datasource.initialSize=5
+##spring.datasource.minIdle=5
+##spring.datasource.maxActive=20
+##spring.datasource.maxWait=60000
+##spring.datasource.timeBetweenEvictionRunsMillis=60000
+##spring.datasource.minEvictableIdleTimeMillis=300000
+##spring.datasource.validationQuery=SELECT 1 FROM DUAL
+##spring.datasource.testWhileIdle=true
+##spring.datasource.testOnBorrow=false
+##spring.datasource.testOnReturn=false
+##spring.datasource.poolPreparedStatements=true
+##spring.datasource.maxPoolPreparedStatementPerConnectionSize=20
+##spring.datasource.filters=stat,wall,log4j
+##spring.datasource.connectionProperties=druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+##spring.datasource.useGlobalDataSourceStat=true
+#
+#
+#
+#
+#
+#
+#
+#
+#\u9ED8\u8BA4\u4F7F\u7528\u914D\u7F6E
+spring:
+  datasource:
+    type : com.alibaba.druid.pool.DruidDataSource
+    url : jdbc:mysql://139.199.127.171:3306/companyProject?useUnicode=true&characterEncoding=utf-8
+    driver-class-name : com.mysql.jdbc.Driver
+    username : wzj@zgyt
+    password : admin123sw21321
+
+#mybatis config
+mybatis:
+  typeAliasesPackage: cn.cpService.basic.bean
+  mapperLocations: classpath:mapper/*.xml
+  
+logging:
+  level :
+    org.springframework.web: DEBUG 
+    
+#tomcat##
+server:
+  tomcat:
+    uri-encoding : UTF-8
+  port: 8085  
+
